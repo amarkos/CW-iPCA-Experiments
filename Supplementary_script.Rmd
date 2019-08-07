@@ -1,0 +1,78 @@
+---
+title: "Experiments"
+author: "Supplementary material"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+For each experiment described in Section 5 of the paper we provide the correponding script: we kept the analysis of the results separated from the data generation and methods application. In this way it is possible to reproduce the results without having to rerun all of the experiments. 
+
+### Re-running the experiments (optional)
+
+The following scripts re-run the whole experiments process, from data generation to analysis. It is a long process (days), therefore it is optional.  
+```{r , eval=FALSE}
+source("Experiment_MCAR.R")
+```
+
+
+
+```{r , eval=FALSE}
+source("Experiment_MNCAR_scenario1.R")
+```
+
+
+
+```{r , eval=FALSE}
+source("Experiment_MNCAR_scenario2.R")
+```
+
+### Analysis of the experiments 
+
+#### MCAR Experiment 
+
+```{r , eval=FALSE}
+source("MCAR_exp_results.R")
+
+```
+
+#### MNCAR Experiment: scenario 1
+
+```{r , eval=FALSE}
+source("MNCAR_exp_results_scenario1.R")
+```
+
+#### MNCAR Experiment: scenario 2
+
+```{r , eval=FALSE}
+source("MNCAR_exp_results_scenario2.R")
+```
+
+
+### TEP Experiment
+
+The TEP original .RData file is available at [Harvard dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1)
+
+#### Pre-processing (pre-processing)
+
+```{r , eval=FALSE}
+source("TEP_full_preproc.R")
+```
+
+#### Analysis: 10 replicates and an increasing number of chunks (optional)
+
+```{r , eval=FALSE}
+source("TEP_experiment_05chunks.R")
+source("TEP_experiment_10chunks.R")
+source("TEP_experiment_15chunks.R")
+source("TEP_experiment_20chunks.R")
+source("TEP_experiment_25chunks.R")
+```
+
+#### Results
+
+```{r , eval=FALSE}
+source("TEP_experiment_results.R")
+```
